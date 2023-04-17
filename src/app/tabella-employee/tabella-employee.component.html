@@ -12,7 +12,7 @@
   (cancelled)="isNewFormHidden = true"
 ></app-employee-form>
 <button [disabled]="!isEditingFormHidden || !isNewFormHidden" (click)="isNewFormHidden = false" class="aggi">
-  <mat-icon>input</mat-icon>
+  <mat-icon>add_circle</mat-icon>
 </button>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
@@ -56,7 +56,7 @@
   <ng-container matColumnDef="edit">
     <th mat-header-cell *matHeaderCellDef>Modifica</th>
     <td mat-cell *matCellDef="let element">
-      <button (click)="modifyRow(element)" [disabled]="!isEditingFormHidden || !isNewFormHidden">
+      <button (click)="modifyRow(element)" [disabled]="!isEditingFormHidden || !isNewFormHidden" style="border-radius: 10px;">
         <mat-icon>edit</mat-icon>
       </button>
     </td>
@@ -66,7 +66,7 @@
   <ng-container matColumnDef="elimina">
     <th mat-header-cell *matHeaderCellDef>Elimina</th>
     <td mat-cell *matCellDef="let element">
-      <button (click)="deleteRow(element.id)" [disabled]="!isEditingFormHidden || !isNewFormHidden">
+      <button (click)="deleteRow(element.id)" [disabled]="!isEditingFormHidden || !isNewFormHidden" style="border-radius: 10px;">
         <mat-icon>delete</mat-icon>
       </button>
     </td>

@@ -6,22 +6,22 @@
     </h3>
   
     <label>Nome</label>
-    <input type="text" [(ngModel)]="employee.firstName">
+    <input type="text" [(ngModel)]="employee.firstName" required>
   
     <label>Cognome</label>
-    <input type="text" [(ngModel)]="employee.lastName">
+    <input type="text" [(ngModel)]="employee.lastName" required >
   
     <label>Genere</label>
-    <select  [(ngModel)]="employee.gender">
+    <select  [(ngModel)]="employee.gender" required>
       <option value="M">M</option>
       <option value="F">F</option>
     </select>
   
     <label>Data di nascita</label>
-    <input  type="date" [(ngModel)]="employee.birthDate">
+    <input  type="date" [(ngModel)]="employee.birthDate" required>
   
     <label>Data di assunzione</label>
-    <input  type="date" [(ngModel)]="employee.hireDate">
+    <input  type="date" [(ngModel)]="employee.hireDate" required>
     <br>
     <button (click)="cancel()">
       <mat-icon>clear</mat-icon>
